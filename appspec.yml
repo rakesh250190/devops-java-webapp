@@ -4,11 +4,12 @@ files:
   - source: /
     destination: /home/ec2-user/apache-tomcat-11.0.7/webapps
 hooks:
-  BeforeInstall:
-    - echo 'Nothin to show'
-  AfterInstall:
-    - echo 'nothing to show'
-  ApplicationStart:
-    - echo 'nothing to show'
   ApplicationStop:
-    - echo 'nothing to show'
+    - location: ApplicationStop.sh
+      runas: ec2-user
+  ApplicationStart:
+    - location: ApplicationStop.sh
+      runas: ec2-user
+  ValidateService:
+    - location: ValidateService.sh
+      runas: ec2-user
