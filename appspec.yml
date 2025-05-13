@@ -4,11 +4,14 @@ files:
   - source: /
     destination: /home/ec2-user/apache-tomcat-11.0.7/webapps
 hooks:
+  BeforeInstall:
+   - location: BeforeInstall.sh
+     runas: ec2-user
   ApplicationStop:
     - location: ApplicationStop.sh
       runas: ec2-user
   ApplicationStart:
-    - location: ApplicationStop.sh
+    - location: ApplicationStart.sh
       runas: ec2-user
   ValidateService:
     - location: ValidateService.sh
