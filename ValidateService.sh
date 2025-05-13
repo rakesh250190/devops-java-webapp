@@ -1,4 +1,4 @@
-curl http://localhost:8080/demo-1.0-SNAPSHOT |grep AWS
+curl http://localhost:8080/demo-1.0-SNAPSHOT/ |grep AWS
 if [ $? -eq 0 ]
 then
 echo "Application started"
