@@ -1,3 +1,4 @@
+sleep 10
 curl http://localhost:8080/demo-1.0-SNAPSHOT/ |grep AWS
 if [ $? -eq 0 ]
 then
