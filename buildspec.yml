@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  - pre-build:
+     commands:
+      - echo "running pre build"
+  - build:
+     commands:
+      - echo "Running build"
+      - mvn clean package test
+  - post-build:
+     commands:
+      - echo "Nothin to do in post build"
+artifacts:
+  - target/demo*.war
