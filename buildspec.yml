@@ -1,7 +1,8 @@
 version: 0.2
 
 proxy:
-  upload_artifacts: yes
+  upload-artifacts: yes
+  
 phases:
   pre_build:
     commands:
