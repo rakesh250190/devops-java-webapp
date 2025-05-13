@@ -17,5 +17,8 @@ phases:
 
 
 artifacts:
-  files: '**/*/demo*.war'
+  files: 
+    - '**/*/demo*.war'
+    - 'appspec.yml'
   name: java-app
+  discard-paths: yes
