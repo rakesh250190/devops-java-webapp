@@ -20,5 +20,6 @@ artifacts:
   files: 
     - '**/*/demo*.war'
     - 'appspec.yml'
+    - '*.sh'
   name: java-app
   discard-paths: yes
