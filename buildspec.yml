@@ -1,15 +1,15 @@
 version: 0.2
 
 phases:
-  - pre-build:
+  pre_build:
      commands:
       - echo "running pre build"
-  - build:
+  build:
      commands:
       - echo "Running build"
       - mvn clean package test
-  - post-build:
+  post-build:
      commands:
       - echo "Nothin to do in post build"
 artifacts:
-  - target/demo*.war
+  - files: target/demo*.war
