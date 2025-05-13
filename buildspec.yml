@@ -6,7 +6,8 @@ phases:
       - echo "Nothing in pre_build"
   build:
     commands:
-      - echo "nothing in build"
+      - echo "running the build"
+      - mvn clean package test
   post_build:
     commands:
       - echo "nothing in post build"
